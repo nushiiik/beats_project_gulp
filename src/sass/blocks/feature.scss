@@ -1,0 +1,48 @@
+.feature {
+	text-align: center;
+	&__pic {
+		margin-bottom: 1.5rem;
+		@media screen and (max-width: 650px) {
+			margin-bottom: 0;
+			margin-right: 0.857rem;
+		}
+	}
+	&__pic-wrappper {
+		display: inline-block;
+		width: 8rem;
+		height: 8rem;
+		border-radius: 50%;
+		background-color: #F2F5F4;
+		position: relative;
+		overflow: hidden;
+	}
+	&__img {
+		width: 3.75rem;
+		height: 3.75rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&__title {
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: calc(27.77px/24px);
+		margin-bottom: 0.4375rem;
+		white-space: nowrap;
+		@include phone {
+			white-space: pre-wrap;
+		}
+	}
+	&__about {
+		color: $grey;
+		line-height: calc(18px/16px);
+	}
+	@media screen and (max-width: 650px) {
+		display: flex;
+		text-align: left;
+		&__content {
+			padding: 3% 15% 0 0;
+		}
+	}
+}

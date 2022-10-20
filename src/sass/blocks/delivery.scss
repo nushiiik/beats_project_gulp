@@ -1,0 +1,17 @@
+.delivery {
+	height: 100%;
+	min-height: 40.625rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: url('./img/bg/bg_form.png') center bottom / cover no-repeat;
+	background-color: #181818;
+	color: white;
+	&__title {
+		text-align: center;
+		margin-bottom: 3.75rem;
+		@include tablet {
+			margin-bottom: 2rem;
+		}
+	}
+}

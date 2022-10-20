@@ -1,0 +1,21 @@
+.why {
+	height: 100%;
+	min-height: 40.625rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	&__title {
+		text-align: center;
+		margin-bottom: 1.125rem;
+	}
+	&__subtitle {
+		text-align: center;
+		color: $grey;
+		margin-bottom: 3.875rem;
+		padding: 0 20%;
+		@include phone {
+			padding: 0 10%;
+		}
+	}
+}

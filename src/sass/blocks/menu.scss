@@ -1,0 +1,25 @@
+.menu {
+	margin: 0 1.875rem;
+	padding-top: 0.5rem;
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: flex-start;
+		font-family: "Alegreya Sans", sans-serif;
+		font-size: 1.125rem;
+	}
+	&__item {
+		margin-right: 1.6875rem;
+		margin-bottom: 0.3333rem;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__link {
+		white-space: nowrap;
+	}
+	@include tablet {
+		display: none;
+	}
+}

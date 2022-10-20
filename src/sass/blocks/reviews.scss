@@ -1,0 +1,22 @@
+.reviews {
+	height: 100%;
+	min-height: 40.625rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	&__title {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	&__switcher {
+		display: flex;
+		justify-content: center;
+	}
+	&__switcher-item {
+		margin-right: 0.375rem;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

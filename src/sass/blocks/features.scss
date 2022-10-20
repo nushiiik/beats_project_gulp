@@ -1,0 +1,40 @@
+.features {
+	display: flex;
+	&__item {
+		flex: 1;
+		padding: 0 5.5%;
+		position: relative;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+			&::after{
+				display: none;
+			}
+		}
+		&::after{
+			content: url('./img/bg/seporator.png');
+			position: absolute;
+			top: 3.125rem;
+			right: 0;
+			transform: translateX(50%);
+		}
+		@media screen and (max-width: 850px) {
+			padding: 0 2%;
+		}
+		@include tablet {
+			padding: 0 1%;
+			&::after {
+				display: none;
+			}
+		}
+		@media screen and (max-width: 650px) {
+			padding: 0;
+			margin-bottom: 1.5rem;
+		}
+	}
+	@media screen and (max-width: 650px) {
+		flex-direction: column;
+	}
+}

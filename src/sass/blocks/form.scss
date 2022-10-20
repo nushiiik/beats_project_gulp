@@ -1,0 +1,146 @@
+.form {
+	display: flex;
+	&__col {
+		flex: 1;
+		margin-right: 1.6875rem;
+		&:last-child {
+			margin-right: 0;
+		}
+		@include tablet {
+			margin-right: 0;
+		}
+	}
+	&__row {
+		display: flex;
+		margin-bottom: 0.875rem;
+	}
+	&__block {
+		flex: 1;
+		margin-right: 1.0625rem;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__title {
+		line-height: calc(18px/16px);
+		margin-bottom: 0.1875rem;
+	}
+	&__input {
+		width: 100%;
+		padding: 1.125rem 0.75rem;
+		border-radius: 0.25rem;
+		border: 0.25rem solid transparent;
+		font-family: "Open Sans", sans-serif;
+		font-size: 0.875rem;
+		&:focus {
+			border-color: $red;
+		}
+		@include tablet {
+			padding: 0.533rem 0.667rem;
+		}
+	}
+	&__input--textarea {
+		height: 9.5rem;
+		resize: none;
+		margin-bottom: 1.125rem;
+		@include tablet {
+			height: 5.467rem;
+			margin-bottom: 0.192rem
+		}
+	}
+	&__controls {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 1.1875rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@include tablet {
+			margin-bottom: 0.1875rem;
+		}
+		@include phone {
+			justify-content: center;
+		}
+	}
+	&__btn {
+		margin-right: 0.9375rem;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	@media screen and (max-width: 1100px) {
+		padding: 0 2rem;
+	}
+	@include tablet {
+		flex-direction: column;
+		padding: 0 9rem;
+		&__btns {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	@media screen and (max-width: 650px) {
+		padding: 0 3rem;
+	}
+	@include phone {
+		padding: 0;
+	}
+}
+
+.radio {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	user-select: none;
+	margin-right: 1.25rem;
+	&__elem {
+		display: none;
+		&:checked ~ .radio__visible {
+			&::before {
+			display: block;
+			}
+		}
+	}
+	&__visible {
+		width: 1.5625rem;
+		height: 1.5625rem;
+		background-color: white;
+		border-radius: 50%;
+		position: relative;
+		margin-right: 0.625rem;
+		&::before {
+			content: '';
+			display: none;
+			width: 0.78125rem;
+			height: 0.78125rem;
+			background-color: $red;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&--checkbox {
+		margin-bottom: 1.8125rem;
+		.radio__visible {
+			border-radius: 0.25rem;
+			&::before {
+				background: url('./img/icons/check.svg') center center no-repeat;
+			}
+		}
+		@include tablet {
+			margin-bottom: 1.4rem;
+		}
+	}
+	@media screen and (max-width: 856px) {
+		margin-bottom: .5rem;
+	}
+	@include tablet {
+		margin-bottom: 1rem;
+	}
+}
+
+.error {
+	color: $red;
+}

@@ -1,0 +1,9 @@
+.title {
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: calc(52px/48px);
+	text-transform: uppercase;
+	@include phone {
+		font-size: 2.286rem;
+	}
+}

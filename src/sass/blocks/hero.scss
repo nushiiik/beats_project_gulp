@@ -1,0 +1,77 @@
+.hero {
+	background-color: #F5F5F5;
+	height: 100%;
+	min-height: 40.625rem;
+	position: relative;
+	&__container {
+		background: url('./img/bg/headphone.png') right center / 50% auto no-repeat;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		padding: 1.5625rem 0 4.0625rem 0;
+		@include tablet {
+			background: none;
+		}
+	}
+	&__description {
+		width: 45%;
+		@include tablet {
+			width: 100%;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			&::before {
+				content: '';
+				background: url('./img/bg/headphone.png');
+				background-size: contain;
+				width: 21.533rem;
+				height: 21.533rem;
+				margin-bottom: 4.267rem;
+				@include phone {
+					margin-bottom: 3.5rem;
+				}
+			}
+		}
+	}
+	&__advantages {
+		@include tablet {
+			display: none;
+		}
+	}
+	&__title {
+		margin-bottom: 1.375rem;
+		@include tablet {
+			padding: 0 7%;
+		}
+		@include phone {
+			padding: 0 15%;
+			margin-bottom: 1rem;
+		}
+	}
+	&__subtitle {
+		font-family: "Alegreya Sans", sans-serif;
+		font-size: 1.3125rem;
+		line-height: calc(25.2px/21px);
+		margin-bottom: 2.25rem;
+		padding-right: 15%;
+		@include tablet {
+			padding: 0 18%;
+		}
+		@include tablet {
+			margin-bottom: 1.857rem;
+		}
+	}
+	&::after {
+		content: url('./img/bg/decorate_1.png');
+		position: absolute;
+		bottom: -1.75rem;
+		right: 20%;
+		@include tablet {
+			right: 10%;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+.socials {
+	display: flex;
+	justify-content: space-between;
+	&__item {
+		width: 2rem;
+		height: 2rem;
+		margin-right: 0.625rem;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__link {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+	}
+	&__img {
+		width: 100%;
+		height: 100%;
+		fill: #B3B3B3;
+		&:hover {
+			fill: black;
+		}
+	}
+}

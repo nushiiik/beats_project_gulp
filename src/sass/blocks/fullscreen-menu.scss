@@ -1,0 +1,43 @@
+.fullscreen {
+	position: fixed;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	background-color: #313131;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	transition: left .5s;
+	&__list {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-size: 2.25rem;
+			line-height: calc(72px/36px);
+			text-align: center;
+			padding-top: 10%;
+		}
+	&__link {
+			color: white;
+		}
+	&__button {
+		width: 1.25rem;
+		height: 1.25rem;
+		background-color: #313131;
+		position: absolute;
+		top: 2.625rem;
+		right: 2.625rem;
+	}
+	&__icon {
+		width: 100%;
+		height: 100%;
+		fill: white;
+		fill-opacity: .7;
+	}
+	&--opened {
+		left: 0;
+	}
+}

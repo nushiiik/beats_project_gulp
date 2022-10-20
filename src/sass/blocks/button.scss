@@ -1,0 +1,24 @@
+.button {
+	display: inline-block;
+	text-transform: uppercase;
+	line-height: calc(18px/16px);
+	font-weight: 700;
+	padding: 1.125rem 2.5625rem;
+	border-radius: 6.25rem;
+	transition: background-color .3s, color .3s;
+	background-color: $red;
+	color: white;
+	&:hover {
+		background-color: #CA1B36;
+	}
+	&--without-style {
+		text-transform: none;
+		font-weight: 400;
+		padding: 0;
+		background-color: transparent;
+		&:hover {
+			background-color: transparent;
+			color: $red;
+		}
+	}
+}

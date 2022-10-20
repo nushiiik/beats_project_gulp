@@ -1,0 +1,87 @@
+.card {
+	background-color: #F8FAF9;
+	padding: 2.625rem 6.6875rem 2.625rem 2.625rem;
+	margin-bottom: 0.9375rem;
+	position: relative;
+	overflow: hidden;
+	min-height: 21.75rem;
+	&__item {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		pointer-events: none;
+		transition: .3 s;
+		opacity: 0;
+		&--active {
+			position: static;
+			opacity: 1;
+			pointer-events: unset;
+		}
+		@include tablet {
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+		}
+	}
+	&__pic {
+		width: 15.8125rem;
+		height: 16.5rem;
+		margin-right: 2.375rem;
+		@include tablet {
+			width: 8.667rem;
+			height: 8.667rem;
+			margin: 0 0 2.133rem 0;
+		}
+	}
+	&__img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+	&__content {
+		flex: 1;
+	}
+	&__title {
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: calc(27.77px/24px);
+		margin-bottom: 1.6875rem;
+		@include tablet {
+			margin-bottom: 1.067rem
+		}
+	}
+	&__text {
+		color: $grey;
+		line-height: calc(18px/16px);
+		margin-bottom: 2.5rem;
+		@include tablet {
+			margin-bottom: 1.067rem
+		}
+	}
+	&__author {
+		font-size: 1.125rem;
+		font-weight: 700;
+	}
+	&::before {
+		content: "";
+		display: block;
+		width: 5.1875rem;
+		height: 5.1875rem;
+		background-color: white;
+		border-radius: 50%;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: -3.325rem;
+		@include tablet {
+			top: -3rem
+		}
+	}
+	@include tablet {
+		padding: 3.733rem 1.6rem;
+	}
+}
