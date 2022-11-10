@@ -55,7 +55,7 @@ task('styles', () => {
 });
 
 task('scripts', () => {
-	return src([...JS_LIBS, 'src/js/*.js', '!src/js/player.js'])
+	return src(['src/js/*.js', '!src/js/player.js'])
    .pipe(gulpif(env === 'dev', sourcemaps.init()))
    .pipe(concat('main.min.js', {newLine: ';'}))
    .pipe(gulpif(env === 'prod', babel({
